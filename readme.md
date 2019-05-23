@@ -114,6 +114,14 @@ On refresh of the page, the new vote results get rendered by the server. So this
 
 Important to notice; the noscript gets rendered by the server on only one route. So the no script tag is not the default. 
 
+##### Hover and focus styles
+
+![screen 3](screens/screen5.png)
+
+When a checkbox is selected, it gets a border radius and a solid white border. This is to give the user feedback about the option is chosen. The border radius is different then the four hard corners of the rest. 
+
+
+
 ##### pleasurable
 
 ![screen 3](/Users/marcelfleuren/Desktop/Minor/PE-resit/screens/screen 3.png)
