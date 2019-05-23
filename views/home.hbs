@@ -1,0 +1,19 @@
+<h1>Wat eten we vandaag?</h1>
+ {{#if err }}
+  <article>
+    <h2><i>{{ err }}</i></h2>
+  </article>
+{{/if }}
+<form action="/results" method="post">
+  <fieldset>
+        <input type="radio" id="shoarma" value="shoarma" name="food">
+        <label for="shoarma">Shoarma</label>
+        <input type="radio" id="boerenkool" value="boerenkool" name="food">
+        <label for="boerenkool">Boerenkool</label>
+        <input type="radio" id="spaghetti" value="spaghetti" name="food"></input>
+        <label for="spaghetti">Spaghetti</label>
+        <input type="radio" id="friet" value="friet" name="food"></input>
+        <label for="friet">Friet</label>
+  </fieldset>
+  <input type="submit" value="Breng stem uit">
+</form>

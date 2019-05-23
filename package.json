@@ -1,0 +1,26 @@
+{
+  "name": "poll",
+  "version": "1.0.0",
+  "description": "For the course of Browser Technologies, my assignment was to make a progressively enhanced live poll",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "Marcel Fleuren",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.5",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "firebase-admin": "^7.3.0",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1",
+    "gulp-livereload": "^4.0.1",
+    "handlebars": "^4.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}

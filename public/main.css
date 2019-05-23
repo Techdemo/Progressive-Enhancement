@@ -1,0 +1,290 @@
+/*  dit moet je allemaal nog progressive enhancen met fallbacks */
+
+/* colors: */
+/* text color: #F2F2F2 */
+/* background-color: #1C304A */
+/* red : #D0021B
+green: #2D7E37
+yellow: #D99D15
+blue : #3F64B8 */
+
+html {
+    font-family: "Lato", sans-serif;
+}
+.chart{
+    display: table;
+    table-layout: fixed;
+    width: 60%;
+    max-width: 700px;
+    height:200px;
+    margin:0 auto;
+    background-size: 100% 50px;}
+    /* background-position: left top; } */
+
+.chart > li {
+    position:relative;
+    display: table-cell;
+    /* vertical align is effectivly support in all browsers since IE6 */
+    vertical-align: bottom;
+    height: 200px;
+}
+span {
+    margin:0 1em;
+    margin: 0 16px;
+    display: block;
+    background: white;
+    background: rgb(242,242,242);
+    background: #F2F2F2;
+}
+
+span:before {
+    position:absolute;
+    left:0;right:0;top:100%;
+    padding:5px 1em 0;
+    display:block;
+    text-align:center;
+    word-wrap: break-word;
+}
+
+body {
+    background-color: darkslategrey;
+    background-color:  rgb(28,48,74);
+    background-color: #1C304A;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, p {
+    color: white;
+    color: rgb(242,242,242);
+    color: #F2F2F2;
+}
+
+/* hier moet feature detection voor flexbox */
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+/* hier moet feature detection voor flexbox */
+nav > ul > li {
+    /*! width: 100%; */
+    border: 1px solid;
+    border-color: white;
+    border-color: rgb(242,242,242);
+    border-color: #F2F2F2;
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    color: rgb(242,242,242);
+    color: #F2F2F2;
+    padding: 1em;
+    padding: 16px;
+    display: inline-block;
+    flex: 1 0;
+    margin: 0;
+}
+nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    color: rgb(242,242,242);
+    color: #F2F2F2;
+    font-size: 16px;
+    font-size: 1em;
+    width: 100%;
+}
+.container {
+    padding: 16px;
+    padding: 1em;
+}
+form {
+    border: none;
+}
+@supports (display: grid){
+    fieldset {
+        display: grid;
+        border: none;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+    }
+}
+@supports not (display: grid) {
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+input[type="radio"] {
+    position: fixed;
+    left: -10000px;
+    left: -100vw;
+}
+input + label {
+    border: 2px solid transparent;
+}
+input:focus + label {
+    border: solid 2px;
+    border-color: white;
+    border-color: rgb(242,242,242);
+    border-color: #F2F2F2;
+}
+input:hover + label {
+    border: solid 2px;
+    border-color: white;
+    border-color: rgb(242,242,242);
+    border-color: #F2F2F2;
+}
+
+/* hier heb ik expliciet voor een border radius gekozen voor visuele hints af te geven dat je dit hebt gekozen. */
+input[type="radio"]:checked + label {
+ border: solid 2px;
+ border-color: white;
+ border-color: rgb(242,242,242);
+ border-color: #F2F2F2;
+ border-radius: 15px;
+}
+label {
+    padding: 16px;
+    padding: 1em;
+    font-size: 24px;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    color: rgb(242,242,242);
+    color: #F2F2F2;
+    border: 2px solid transparent;
+}
+label:first-of-type {
+    background-color: red;
+    background-color: rgb(208,2,27);
+    background-color: #D0021B;
+}
+label:nth-of-type(2){
+    background-color: green;
+    background-color: rgb(45,126,55);
+    background-color: #2D7E37;
+}
+label:nth-of-type(3){
+    background-color: orange;
+    background-color: rgb(217,157,21);
+    background-color: #D99D15;
+}
+label:nth-of-type(4){
+    background-color: blue;
+    background-color: rgb(63,100,184);
+    background-color: #3F64B8;
+}
+input[type="submit"]{
+    padding: 8px;
+    padding: 0.5em;
+    margin-top: 24px;
+    margin-top: 1.5em;
+    background-color: white;
+    background-color: rgb(242,242,242);
+    background-color: #F2F2F2;
+    font-size: 24px;
+    font-size: 1.5em;
+    border: solid 2px;
+    border-color: darkslategrey;
+    border-color: rgb(28,48,74);
+    border-color: #1C304A;
+    color: darkslategrey;
+    color: rgb(28,48,74);
+    color: #1C304A;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    border-radius: 25px;
+    background-color: #1C304A;
+    color: #F2F2F2;
+     border: solid 2px #F2F2F2;
+}
+table {
+    color: white;
+    color: rgb(242,242,242);
+    color: #F2F2F2;
+}
+th {
+    border: 2px solid;
+    border-color: white;
+    border-color: rgb(242,242,242);
+    border-color: #F2F2F2;
+}
+#shoarmaChart {
+     background-color: red;
+    background-color: rgb(208,2,27);
+    background-color: #D0021B;
+}
+#boerenkoolChart{
+     background-color: green;
+    background-color: rgb(45,126,55);
+    background-color: #2D7E37;
+}
+#spaghettiChart{
+     background-color: orange;
+    background-color: rgb(217,157,21);
+    background-color: #D99D15;
+}
+#frietChart{
+     background-color: blue;
+    background-color: rgb(63,100,184);
+    background-color: #3F64B8;
+}
+@supports(display: flex){
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+}
+section {
+    float: left;
+}
+
+.refresh {
+    padding: 8px;
+    padding: 0.5em;
+    margin-top: 24px;
+    margin-top: 1.5em;
+    background-color: darkslategrey;
+    background-color: rgb(28,48,74);
+    background-color: #1C304A;
+    font-size: 24px;
+    font-size: 1.5em;
+    border: solid 2px #1C304A;
+    color: #1C304A;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: 10em;
+    text-align: center;
+    animation: fade-in 5s forwards;
+}
+/* wellicht kun je hier ook een fallback voor schrijven. */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        background-color: white;
+        background-color: rgb(242,242,242);
+        background-color: #F2F2F2;
+        opacity: 1;
+    }
+}
+
+.refresh:hover {
+    border-radius: 25px;
+}
+span {
+    transition: all 0.5s ease-in;
+}

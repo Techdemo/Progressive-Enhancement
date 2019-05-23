@@ -1,0 +1,61 @@
+<h1>Resultaten</h1>
+ {{#if vote }}
+    <h2>Bedankt voor je stem</h2>
+  <article>
+   <h3>Je hebt {{ vote }} gestemd</h3>
+  </article>
+{{/if }}
+
+<section>
+    <h2>Dit zijn de resultaten tot nu toe</h2>
+
+<table style="width:100%">
+  <tr>
+    <th style="text-align:left">Gerecht</th>
+    <th style="text-align:left">Aantal stemmen</th>
+  </tr>
+  <tr>
+    <td>Shoarma</td>
+    <td id="shoarmaTextTable">{{ data.shoarma }}</td>
+  </tr>
+  <tr>
+    <td>Boerenkool</td>
+    <td id="boerenkoolTextTable">{{ data.boerenkool }}</td>
+  </tr>
+  <tr>
+    <td>Spaghetti</td>
+    <td id="spaghettiTextTable">{{ data.spaghetti }}</td>
+  </tr>
+  <tr>
+    <td>Friet</td>
+    <td id="frietTextTable">{{ data.friet }}</td>
+  </tr>
+</table>
+
+<ul class="chart">
+  <li>
+    <p id="shoarmaText">Shoarma: {{data.shoarma}}pt</p>
+    <span style="height:{{data.shoarma}}%" title="Shoarma" id="shoarmaChart">
+    </span>
+  </li>
+  <li>
+    <p id="boerenkoolText">Boerenkool: {{data.boerenkool}}pt</p>
+    <span style="height:{{data.boerenkool}}%" title="Boerenkool" id="boerenkoolChart">
+    </span>
+  </li>
+  <li>
+    <p id="spaghettiText">Spaghetti: {{data.spaghetti}}pt</p>
+    <span style="height:{{data.spaghetti}}%" title="Spaghetti" id="spaghettiChart">
+    </span>
+  </li>
+  <li>
+    <p id="frietText">Friet: {{data.friet}}pt</p>
+    <span style="height:{{data.friet}}%"  title="Friet" id="frietChart">
+    </span>
+  </li>
+</ul>
+<noscript>
+  <p>deze pagina herlaad automatisch, mocht dat niet gebeuren doe dat hier handmatig</p>
+</noscript>
+<a id="refresh" class="refresh" href="">ververs resultaten</a>
+</section>
