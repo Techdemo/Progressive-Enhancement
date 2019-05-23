@@ -60,7 +60,7 @@ app.get('/results', function(req, res, next) {
 
   });
 
-app.post('/results', (req, res) => {
+app.post('/vote-submit', (req, res) => {
   if (req.body.food === undefined) {
     res.render('home', {
       layout: 'default',
@@ -84,11 +84,13 @@ app.post('/results', (req, res) => {
         return data
       })
       .then(data => {
+        let noscript = "<meta http-equiv=refresh content=5;URL='/results'/>"
         res.render('results', {
           layout: 'default',
           template: 'home-template',
           vote: vote,
-          data: data
+          data: data,
+          noscript: noscript
         })
       })
       .catch(err => {

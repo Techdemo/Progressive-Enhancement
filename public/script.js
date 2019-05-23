@@ -1,7 +1,7 @@
-let refresh = document.getElementById("refresh")
-refresh.remove()
-
-if (!!window.EventSource) {
+// last change, I moved the remove refresh into the if function
+if ('EventSource' in window) {
+    let refresh = document.getElementById("refresh")
+    refresh.remove()
     const evtSource = new EventSource('/eventstream');
     evtSource.addEventListener('message', event => {
         const data = JSON.parse(event.data);
@@ -36,6 +36,7 @@ if (!!window.EventSource) {
     })
 
 } else {
-    console.log("Your browser doesn't support SSE")
+    console.log("do nothing ")
+
 }
 
